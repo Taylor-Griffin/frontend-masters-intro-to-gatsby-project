@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 
-export default function IndexPage() {
+export default function AboutPage() {
   return (
     <main>
-      <h1>about this site</h1>
+      <h1>About this site</h1>
+      <Link to="/">Back to home</Link>
     </main>
   );
 }
