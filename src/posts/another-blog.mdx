@@ -1,12 +1,30 @@
 ---
 
 date: 2021-08-12
+slug: another-blog
 title: Another Blog
 description: I'm back baby.
 
 ---
 
+import {graphql} from 'gatsby';
+import {GatsbyImage, getImage} from 'gatsby-plugin-image';
+
+export const query = graphql`
+query SmashburgerQuery {
+    file(name: {eq: "smashburger"}){
+        childImageSharp{
+            gatsbyImageData(placeholder: DOMINANT_COLOR)
+        }
+    }
+}
+`
+
 
 # oh wow
+<GatsbyImage
+image={getImage(props.data.file)}
+alt="smashburger on plate"
+/>
 
 this is even better!
